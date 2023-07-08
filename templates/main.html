@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OlesyaCymbal</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='second-main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="header_block-container -container">
+                <div class="header_block-body">
+                    <a href=""><h2 class="header_block-tittle">Olesya<span>Tsymbal</span></h2></a>
+                    <nav class="header_block-menu">
+                        <ul class="header_block-list">
+                            <li class="header_block-item">
+                                <a href="#" class="header_block-link -green">Про себе</a>
+                            </li>
+                            <li class="header_block-item">
+                                <a href="#" class="header_block-link">Статті</a>
+                            </li>
+                            <li class="header_block-item"> 
+                                <a href="#" class="header_block-link">Бібліотека</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header_block-menutel">
+                        <a href=""><img src="{{ url_for('static', filename='png15.png') }}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <section class="main_block">
+
+                <div class="main_block-container -container">
+
+                    <div class="main_block-body">
+
+                        <div class="main_block-part1">
+
+                            <div class="main_block-picture1"></div>
+    
+                            <div class="main_block-resume">
+                                <div class="main_block-portret">
+                                    <div class="main_block-photo"></div>
+                                    <div class="main_block-info">
+                                        <h3 class="main_block-tittle">Олеся Цимбал</h3>
+                                        <p class="main_block-subtittle1">Психолог арт-терапевт</p>
+                                    </div>
+                                </div>
+                                <p class="main_block-subtittle2">10 років <br> досвіду</p>
+                            </div>
+    
+                            <div class="main_block-picture2"></div>
+                        </div>
+
+                        <div class="main_block-part2">
+                            <div class="main_block-tel"></div>
+                            <p class="main_block-subtittle3">Зв’яжитесь зі мною зараз! <br><a href="tel:+380 (67) 638 16 17">+380 (67) 638 16 17</a></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="invite_block">
+                <div class="invite_block-container -container">
+                    <div class="invite_block-body">
+                        <div class="invite_block-box">
+                            <div class="invite_block-item">
+                                <img src="{{ url_for('static', filename='png5.png') }}" alt="">
+                                <h4 class="invite_block-tittle">Депресія</h4>
+                            </div>
+                            <div class="invite_block-item">
+                                <img src="{{ url_for('static', filename='png6.png') }}" alt="">
+                                <h4 class="invite_block-tittle">Тревожні розлади</h4>
+                            </div>
+                            <div class="invite_block-item">
+                                <img src="{{ url_for('static', filename='png7.png') }}" alt="">
+                                <h4 class="invite_block-tittle">Кризисна терапія</h4>
+                            </div>
+                            <div class="invite_block-item">
+                                <img src="{{ url_for('static', filename='png8.png') }}" alt="">
+                                <h4 class="invite_block-tittle">Сімейна терапія</h4>
+                            </div>
+                            <div class="invite_block-item">
+                                <img src="{{ url_for('static', filename='png9.png') }}" alt="">
+                                <h4 class="invite_block-tittle">Дитячо-батьківські відносини</h4>
+                            </div>
+                        </div>
+                        <div class="invite_block-inviteincenter">
+                            <div class="invite_block-invitein">
+                                <div class="invite_block-border"></div>
+                                <button>Записатися</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="description_block">
+                <div class="description_block-container -container">
+                    <div class="description_block-body">
+                        <div class="description_block-part1 -description">
+
+                            <div class="description_block-people1">
+                                <img src="{{ url_for('static', filename='png10.png') }}" alt="">
+                            </div>
+    
+                            <div class="description_block-text -flex-text">
+
+                                <h3 class="spec">Міф № 1</h3>
+                                
+                                <h3 class="spec -a2">Дійсно, стороння людина не зможе дізнатися про вас так глибоко, як ви знаєте себе.</h3>
+
+                                <p>Перукарі ходять стригтися до інших перукарів, лікарі лікуватися до інших лікарів. Психологи так само ходять до інших психологів, незважаючи на те, що добре знають і себе, і пристрій людської психіки. По відношенню до себе ми упереджені: психіка не дає побачити приховані вторинні вигоди, через досвід, напруження емоцій чи інші причини неможливо помітити сліпі зони. Саме тому не з усіма проблемами можна впоратися поодинці, навіть якщо ви чудово знаєтеся на людях. Психіка, як і тіло, вимагає турботи та страждає від самолікування.</p>
+                            
+                            </div>
+    
+                            <div class="description_block-puzzle1"></div>
+                        </div>
+
+                        <div class="description_block-hr -green2"></div>
+
+                        <div class="description_block-part2 -description">
+
+                            <div class="description_block-puzzle2"></div>
+    
+                            <div class="description_block-text"> 
+
+                                <p>Я Цимбал Олеся,дипломований психолог і АРТ-терапевт. Вже більше ніж 8 років у сфері сімейної терапії, дитяче-батьківських та підліткових відносин, кризисною терапії, знаходжусь в епіцентрі життєвих непорозумінь з якими стикаюьбся люди. Їм не вистачає ресурсу, знань або бажання для вирішення питань. І саме цей період є ключовим для звернення до психолога 
+                                    Як Фахівець маю знання, інструменти, та цілий арсенал
+                                    технік,щоб допомогти знайти максимально вірний вихід зі складних життєвих ситуацій. Є 3 правилаякі я проговорюю перед початком сесії. <br>
+                                     <ol>
+                                        <li>Конфіденційеість </li>
+                                        <li>Не стримувати емоцій.</li>
+                                        <li>Довіра. Чим швидше ви відкриєтесь, тим швидше перейдемодо рішення питання.</li>
+                                     </ol>
+                                    Завжди щиро радію коли ми разом перемагаємо  труднощі, досягаемо результату. Не залишайтесь на самоті довіртесь фахівцю</p>
+                            </div>
+    
+                            <div class="description_block-people2">
+                                <img src="{{ url_for('static', filename='png13.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_block-container -container">
+                <div class="footer_block-body">
+
+                    <div class="footer_block-about">
+                        <div class="description_block-hr -white"></div>
+                        <div class="footer_block-social">
+                            <div class="footer_block-item">
+                                <i class="fa-brands fa-instagram"></i>
+                                <a href=""><span>psy.olesya.kr</span></a>
+                            </div>
+                            <div class="footer_block-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <a href=""><span>+380(67) 638 16 17</span></a>
+                            </div>
+                            <div class="footer_block-item">
+                                <i class="fa-brands fa-facebook"></i>
+                                <a href=""><span>Секрети Сімейного Благополуччя</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer_block-name">
+                        <h1 class="footer_block-tittle"><a href="">O<span>T</span></a></h1>
+                        <h2 class="footer_block-subtittle"><a href="">Olesya<span>Tsymbal</span></a></h2>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+</body>
+</html>
