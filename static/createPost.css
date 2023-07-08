@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    line-height: 22px;
+    color: #23715E;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+a {
+    text-decoration: none;
+}
+ul,
+li {
+    list-style: none;
+}
+span {
+    color: black;
+    font-weight: 600;
+}
+
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.-container {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 120px;
+}
+.hr {
+    width: 50%;
+    height: 3px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+
+
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.header_block-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    padding: 36px 0;
+}
+.header_block-menu {
+    padding: 5px 0 0 0;
+}
+.header_block-list {
+    display: flex;
+    align-items: center;
+}
+.header_block-item {
+    padding: 3px 0 5px 12px;
+}
+.header_block-item:not(:last-child) {
+    margin-right: 100px;
+}
+.header_block-link  {
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.header_block-link:hover {
+    color:#23715E;
+}
+.header_block-tittle {
+    font-size: 24px;
+    font-weight: 700;
+    color:#1FA786;
+}
+.-green {
+    color:#23715E;
+    font-weight: 600;
+}
+
+
+
+.main {
+    flex: 1 1 auto;
+}
+
+
+
+
+
+.footer {
+    background: linear-gradient(106deg, #212C29 0%, #0D4739 100%);
+}
+.footer span {
+    color: white;
+}
+.footer_block-body {
+    padding: 175px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.-white {
+    background: white;
+    position: absolute;
+    left: 0;
+}
+
+.footer_block-item {
+    color: white;
+    margin-top: 48px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.footer_block-item a {
+    margin-left: 20px;
+    font-weight: 600;
+}
+.footer_block-item i {
+    font-size: 30px;
+}
+.footer_block-name {
+    text-align: center;
+    line-height: initial;
+}
+.footer_block-tittle {
+    font-size: 96px;
+    color: #1FA786;
+}
+.footer_block-tittle > a, .footer_block-subtittle > a{
+    color: #1FA786;
+    font-weight: 700;
+}
+.footer_block-subtittle {
+    font-size: 32px;
+}
