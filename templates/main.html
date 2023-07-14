@@ -18,17 +18,17 @@
         <header class="header">
             <div class="header_block-container -container">
                 <div class="header_block-body">
-                    <a href=""><h2 class="header_block-tittle">Olesya<span>Tsymbal</span></h2></a>
+                    <a href="/"><h2 class="header_block-tittle">Olesya<span>Tsymbal</span></h2></a>
                     <nav class="header_block-menu">
                         <ul class="header_block-list">
                             <li class="header_block-item">
-                                <a href="#" class="header_block-link -green">Про себе</a>
+                                <a href="/" class="header_block-link -green">Про себе</a>
                             </li>
                             <li class="header_block-item">
-                                <a href="#" class="header_block-link">Статті</a>
+                                <a href="{{ url_for('posts') }}" class="header_block-link">Статті</a>
                             </li>
                             <li class="header_block-item"> 
-                                <a href="#" class="header_block-link">Бібліотека</a>
+                                <a href="{{ url_for('index') }}" class="header_block-link">Бібліотека</a>
                             </li>
                         </ul>
                     </nav>

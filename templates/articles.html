@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='upload-post-main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='articles-main.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
@@ -35,39 +35,32 @@
                 </div>
             </div>
         </header>
-        <main class="main">
+        <main>
             <section class="section">
-                <div class="section_block-container -container">
-                    <div class="position-block-section">
-                        <div class="section_block-body">
-                            <div class="group-block-section">
+                {% for post in posts %}
+                <div class="container-section">
+                    <div class="block-section_body -container">
+                        <div class="h3-block-tittle">
+                            <h3 class="h3-tittle">Tittle</h3>
+                        </div>
+                        <div class="block-line">
+                            <hr class="line-section">
+                        </div>
+                        <div class="form-blocks">
+                            <div class="group-blocks">
                                 <div class="block-foto">
-                                    <img src="{{ url_for('static', filename='Vector.png') }}" alt="">
+                                    <!-- <img class = "Negr" src="{{ url_for('static', filename='') }}" alt=""  width="427" height="250"> -->
+                                    <img class = "Negr" src="/static/{{ post[1] }}" alt="Image"  width="427" height="250">
                                 </div>
-                                <form action="/up_post" method="post" enctype="multipart/form-data">
-                                    <textarea type="text" name="text_of_post" placeholder="Text:" name="get_text" class="input-text-section" cols="40" rows="0"></textarea>
-                                    </div>
+                                <div class="group-inputs">
+
+                                    <textarea placeholder="Text:" wrap="soft" name="text" cols="60" rows="10" class="input-text-section" readonly>{{ post[0] }}</textarea>
                                 </div>
-                            </div>
-                            <div class="group-buttons">
-                                <div class="block-button-section">
-                                    <a class="sent-button" href="">Добавити фото</a>
-                                    <input type="file" name="photo">
-                                </div>
-                                <div class="block-button-section -button">
-                                    <a class="sent-button" href="">Добавити опис </a>
-                                </div>
-                            </div>
-                            <div class="position-block-sent-button">
-                                <div class="block-sent-button">
-                                    
-                                    <!--<a class="sent-button" href="{{ url_for('index') }}">Опубліковати</a>-->
-                                    <input class="button-section" type="submit" value="Опубліковати">
-                                </form>
-                        
+                          </div>
                         </div>
                     </div>
-            </div>
+                </div>
+                {% endfor %}
             </section>
         </main>
         <footer class="footer">
