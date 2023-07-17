@@ -86,26 +86,18 @@ def posts():
     connection = sqlite3.connect('mydatabase.db')
     cursor = connection.cursor()
     select_query = "SELECT texts, photo FROM mytable"
-    select_image = "SELECT photo FROM mytable"
+    #select_image = "SELECT photo FROM mytable"
 
     cursor.execute(select_query)
-    #cursor.execute(select_image)
 
     # Получение результатов запроса
     results = cursor.fetchall()
     posts = [(result[0], result[1]) for result in results]
-    #imgs = [result[0] for result in results]
-    #images = [result[0] for result in results]
-    #file = (posts[1])
-
-    #file = os.path.join("static" , posts_str)
-    #posts = [result[0] for result in results]
-    #posts_str = ' '.join(imgs)
-    #fi#le = os.path.join("static" , posts_str)
+    reversed_posts = list(reversed(posts))
     cursor.close()
     connection.close()
 
-    return render_template("articles.html", posts=posts)
+    return render_template("articles.html", posts=reversed_posts)
 
 
 if __name__ == "__main__":

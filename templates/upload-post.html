@@ -42,7 +42,7 @@
                         <div class="section_block-body">
                             <div class="group-block-section">
                                 <div class="block-foto">
-                                    <img src="{{ url_for('static', filename='Vector.png') }}" alt="">
+                                    <img id="preview-image" src="{{ url_for('static', filename='Vector.png') }}" alt="" width="427" height="250" >    
                                 </div>
                                 <form action="/up_post" method="post" enctype="multipart/form-data">
                                     <textarea type="text" name="text_of_post" placeholder="Text:" name="get_text" class="input-text-section" cols="40" rows="0"></textarea>
@@ -52,10 +52,26 @@
                             <div class="group-buttons">
                                 <div class="block-button-section">
                                     <a class="sent-button" href="">Добавити фото</a>
-                                    <input type="file" name="photo">
+                                    <input type="file" name="photo" id="photo-input">
+                                    <script>
+                                        const photoInput = document.getElementById('photo-input');
+                                        const previewImage = document.getElementById('preview-image');
+
+                                        photoInput.addEventListener('change', (event) => {
+                                            const file = event.target.files[0];
+                                            const reader = new FileReader();
+
+                                            reader.onload = (e) => {
+                                                previewImage.src = e.target.result;
+                                            };
+
+                                            reader.readAsDataURL(file);
+                                        });
+                                    </script>
                                 </div>
                                 <div class="block-button-section -button">
-                                    <a class="sent-button" href="">Добавити опис </a>
+                                    <button type="button" id="add-link-button" class="sent-button">Добавити посилання</button>
+
                                 </div>
                             </div>
                             <div class="position-block-sent-button">
@@ -64,6 +80,7 @@
                                     <!--<a class="sent-button" href="{{ url_for('index') }}">Опубліковати</a>-->
                                     <input class="button-section" type="submit" value="Опубліковати">
                                 </form>
+
                         
                         </div>
                     </div>
