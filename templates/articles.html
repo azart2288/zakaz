@@ -54,7 +54,10 @@
                                 </div>
                                 <div class="group-inputs">
 
-                                    <textarea placeholder="Text:" wrap="soft" name="text" cols="60" rows="10" class="input-text-section" readonly>{{post[0]}}</textarea>
+                                    <div contenteditable="false" class="input-text-section" readonly>
+                                        {{ post[0] | safe }}
+                                    </div>
+                                    
                                 </div>
                           </div>
                         </div>

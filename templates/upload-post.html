@@ -45,7 +45,7 @@
                                     <img id="preview-image" src="{{ url_for('static', filename='Vector.png') }}" alt="" width="427" height="250" >    
                                 </div>
                                 <form action="/up_post" method="post" enctype="multipart/form-data">
-                                    <textarea type="text" name="text_of_post" placeholder="Text:" name="get_text" class="input-text-section" cols="40" rows="0"></textarea>
+                                    <textarea type="text" name="text_of_post" id ="get_text" placeholder="Text:"  class="input-text-section" cols="40" rows="0"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -68,9 +68,27 @@
                                             reader.readAsDataURL(file);
                                         });
                                     </script>
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function () {
+                                            const addLinkButton = document.getElementById('add-link-button');
+                                            const textArea = document.getElementById('get_text');
+
+                                            addLinkButton.addEventListener('click', () => {
+                                                const linkHTML = '<a href="Ваше посилання">Назва</a>';
+
+                                                // Получаем текущее содержимое <textarea>
+                                                const currentContent = textArea.value;
+
+                                                // Добавляем ссылку в значение <textarea>, разделяя ее переводом строки (если необходимо)
+                                                textArea.value = currentContent ? `${currentContent}${linkHTML}` : linkHTML;
+                                            });
+                                        });
+                                    </script>
                                 </div>
                                 <div class="block-button-section -button">
                                     <button type="button" id="add-link-button" class="sent-button">Добавити посилання</button>
+
+                                    
 
                                 </div>
                             </div>
