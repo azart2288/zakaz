@@ -112,7 +112,6 @@ ol{
 }
 .input-text-section{
     outline: none;
-    padding-top: 72px;
     background: none;
     border: none;
     color: #23715E;
@@ -172,6 +171,13 @@ ol{
 }
 .sent-button {
     color: #C6C6C6;
+}
+.title {
+    margin-bottom: 30px;
+}
+
+.title2 {
+    margin-top: 20px;
 }
 
 

@@ -62,7 +62,7 @@ def post():
 def up_post():
     post_text = request.form["text_of_post"]
     new_post = Post()
-    name_post = "local_post"
+    name_post = request.form["title"]
     text = post_text
     name = name_post
     photo = request.files['photo']
@@ -85,14 +85,14 @@ def page_not_found(e):
 def posts():
     connection = sqlite3.connect('mydatabase.db')
     cursor = connection.cursor()
-    select_query = "SELECT texts, photo FROM mytable"
+    select_query = "SELECT texts, photo, name FROM mytable"
     #select_image = "SELECT photo FROM mytable"
 
     cursor.execute(select_query)
 
     # Получение результатов запроса
     results = cursor.fetchall()
-    posts = [(result[0], result[1]) for result in results]
+    posts = [(result[0], result[1], result[2]) for result in results]
     reversed_posts = list(reversed(posts))
     cursor.close()
     connection.close()

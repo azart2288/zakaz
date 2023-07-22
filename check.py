@@ -7,19 +7,17 @@ connection = sqlite3.connect('mydatabase.db')
 cursor = connection.cursor()
 
 # SQL-запрос для выборки данных из таблицы
-select_query = "SELECT photo FROM mytable"
+select_query = "SELECT texts, photo FROM mytable"
 
 # Выполнение SQL-запроса
 cursor.execute(select_query)
 
 # Получение всех результатов
 results = cursor.fetchall()
-posts = [result[0] for result in results]
-#posts_str = ' '.join(posts)
-file = "{{ url_for('static', filename= " , posts , "}}"
+posts = [(result[0], result[1]) for result in results]
 
 # Вывод результатов
-print(posts_str)
+print(posts)
 
 # Закрытие соединения
 connection.close()

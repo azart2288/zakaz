@@ -40,12 +40,14 @@
                 <div class="section_block-container -container">
                     <div class="position-block-section">
                         <div class="section_block-body">
-                            <div class="group-block-section">
-                                <div class="block-foto">
-                                    <img id="preview-image" src="{{ url_for('static', filename='Vector.png') }}" alt="" width="427" height="250" >    
-                                </div>
-                                <form action="/up_post" method="post" enctype="multipart/form-data">
-                                    <textarea type="text" name="text_of_post" id ="get_text" placeholder="Text:"  class="input-text-section" cols="40" rows="0"></textarea>
+                            <form action="/up_post" method="post" enctype="multipart/form-data">
+                                <div class="group-block-section">
+                                    <input type="text" name="title" placeholder="Заголовок" class="input-text-section title">
+                                    <div class="block-foto">
+                                        <img id="preview-image" src="{{ url_for('static', filename='Vector.png') }}" alt="" width="427" height="250" >    
+                                    </div>
+                                
+                                    <textarea type="text" name="text_of_post" id ="get_text" placeholder="Text:"  class="input-text-section title2" cols="40" rows="0"></textarea>
                                     </div>
                                 </div>
                             </div>
