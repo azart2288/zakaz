@@ -57,6 +57,26 @@ def post():
     else:
         return redirect('/')
 
+@app.route('/manage')
+def manage():
+    if 'logged_in' in session and session['logged_in']:
+        connection = sqlite3.connect('mydatabase.db')
+        cursor = connection.cursor()
+        select_query = "SELECT texts, photo, name,id FROM mytable"
+        #select_image = "SELECT photo FROM mytable"
+
+        cursor.execute(select_query)
+
+        # Получение результатов запроса
+        results = cursor.fetchall()
+        posts = [(result[0], result[1], result[2],result[3]) for result in results]
+        reversed_posts = list(reversed(posts))
+        cursor.close()
+        connection.close()
+        return render_template('articles_admin.html', posts=reversed_posts)
+    else:
+        return redirect('/')
+
 
 @app.route('/up_post', methods=['POST'])
 def up_post():
@@ -75,6 +95,23 @@ def up_post():
     return redirect('/posts')
 
     #return post_text
+
+@app.route("/del_post", methods=['POST'])
+def del_post():
+    connection = sqlite3.connect('mydatabase.db')
+    cursor = connection.cursor()
+    delete_query = "DELETE FROM mytable WHERE id = ?"
+
+    # Выполните SQL-запрос с передачей id поста в качестве параметра
+
+    post_id = request.form["post_id"]
+    photo_id = request.form["photo_id"]
+    cursor.execute(delete_query, (post_id,))
+
+    # Подтвердите изменения в базе данных
+    os.remove(photo_id)
+    connection.commit()
+    return redirect("/posts")
     
 @app.errorhandler(404)
 def page_not_found(e):
@@ -85,14 +122,14 @@ def page_not_found(e):
 def posts():
     connection = sqlite3.connect('mydatabase.db')
     cursor = connection.cursor()
-    select_query = "SELECT texts, photo, name FROM mytable"
+    select_query = "SELECT texts, photo, name, id FROM mytable"
     #select_image = "SELECT photo FROM mytable"
 
     cursor.execute(select_query)
 
     # Получение результатов запроса
     results = cursor.fetchall()
-    posts = [(result[0], result[1], result[2]) for result in results]
+    posts = [(result[0], result[1], result[2], result[3]) for result in results]
     reversed_posts = list(reversed(posts))
     cursor.close()
     connection.close()

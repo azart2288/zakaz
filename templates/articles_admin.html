@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='articles-main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header_block-container -container">
+                <div class="header_block-body">
+                    <a href="/"><h2 class="header_block-tittle">Olesya<span class="span-tittle-header">Tsymbal</span></h2></a>
+                    <nav class="header_block-menu">
+                        <ul class="header_block-list">
+                            <li class="header_block-item">
+                                <a href="/" class="header_block-link">Про себе</a>
+                            </li>
+                            <li class="header_block-item">
+                                <a href="{{ url_for('posts') }}" class="header_block-link -green">Статті</a>
+                            </li>
+                            <li class="header_block-item"> 
+                                <a href="{{ url_for('index') }}" class="header_block-link">Бібліотека</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header_block-menutel">
+                        <a href=""><img src="{{ url_for('static', filename='png15.png') }}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="section">
+                {% for post in posts %}
+                <div class="container-section" id="post-container-{{ loop.index }}">
+                    <div class="block-section_body -container">
+                        <div class="h3-block-tittle">
+                            <h3 class="h3-tittle">{{ post[2] }}</h3>
+                        </div>
+                        <div class="block-line">
+                            <hr class="line-section">
+                        </div>
+                        <div class="form-blocks">
+                            <div class="group-blocks">
+                                <div class="block-foto">
+                                    <!-- <img class = "Negr" src="{{ url_for('static', filename='') }}" alt=""  width="427" height="250"> -->
+                                    <img class = "Negr" src="/static/{{ post[1] }}" alt="Image"  width="427" height="250">
+                                </div>
+                                <div class="group-inputs">
+
+                                    <div contenteditable="false" class="input-text-section" readonly>
+                                        {{ post[0] | safe }}
+                                    </div>
+
+                                    
+                                </div>
+
+                          </div>
+                          <form action="/del_post" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="post_id" value="{{ post[3] }}">
+                            <input type="hidden" name="photo_id" value="static/{{ post[1] }}">
+                            <button type="submit">Видалити</button>
+                        </form>
+                          
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer_block-container -container">
+                <div class="footer_block-body">
+
+                    <div class="footer_block-about">
+                        <div class="description_block-hr -white"></div>
+                        <div class="footer_block-social">
+                            <div class="footer_block-item">
+                                <i class="fa-brands fa-instagram"></i>
+                                <a href=""><span>psy.olesya.kr</span></a>
+                            </div>
+                            <div class="footer_block-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <a href=""><span>+380(67) 638 16 17</span></a>
+                            </div>
+                            <div class="footer_block-item">
+                                <i class="fa-brands fa-facebook"></i>
+                                <a href=""><span>Секрети Сімейного Благополуччя</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer_block-name">
+                        <h1 class="footer_block-tittle"><a href="">O<span>T</span></a></h1>
+                        <h2 class="footer_block-subtittle"><a href="">Olesya<span>Tsymbal</span></a></h2>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
