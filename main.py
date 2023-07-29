@@ -25,6 +25,10 @@ def home():
 
 @app.route('/library')
 def index():
+    return render_template('choise.html')
+
+@app.route('/films')
+def films():
     return render_template('index.html')
 
 
@@ -112,6 +116,19 @@ def del_post():
     os.remove(photo_id)
     connection.commit()
     return redirect("/posts")
+
+@app.route("/change_post", methods=['POST'])
+def change_post():
+    connection = sqlite3.connect('mydatabase.db')
+    cursor = connection.cursor()
+    post_id = request.form["post_id"]
+    new_text = request.form["admin_text"]
+    cursor.execute("UPDATE mytable SET texts=? WHERE id=?", (new_text, post_id))
+    connection.commit()
+    connection.close()
+    return redirect("/posts")
+
+
     
 @app.errorhandler(404)
 def page_not_found(e):

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
@@ -12,26 +12,29 @@
 </head>
 <body>
     <div class="wrapper">
-            <header class="header">
-                <div class="header_block-container -container">
-                    <div class="header_block-body">
-                        <a href="/"><h2 class="header_block-tittle">Olesya<span class="span-tittle">Cymbal</span></h2></a>
-                        <nav class="header_block-menu">
-                            <ul class="header_block-list">
-                                <li class="header_block-item">
-                                    <a href="/" class="header_block-link">Про себе</a>
-                                </li>
-                                <li class="header_block-item">
-                                    <a href="{{ url_for('posts') }}" class="header_block-link">Статті</a>
-                                </li>
-                                <li class="header_block-item"> 
-                                    <a href="{{ url_for('index') }}" class="header_block-link -green">Бібліотека</a>
-                                </li>
-                            </ul>
-                        </nav>
+        <header class="header">
+            <div class="header_block-container -container">
+                <div class="header_block-body">
+                    <a href="/"><h2 class="header_block-tittle">Olesya<span class="span-tittle-header">Tsymbal</span></h2></a>
+                    <nav class="header_block-menu">
+                        <ul class="header_block-list">
+                            <li class="header_block-item">
+                                <a href="#" class="header_block-link">Про себе</a>
+                            </li>
+                            <li class="header_block-item">
+                                <a href="{{ url_for('posts') }}" class="header_block-link">Статті</a>
+                            </li>
+                            <li class="header_block-item"> 
+                                <a href="{{ url_for('index') }}" class="-green">Бібліотека</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header_block-menutel">
+                        <a href=""><img src="./img/png 15.png" alt=""></a>
                     </div>
                 </div>
-            </header>
+            </div>
+        </header>
         <main class="main">
             <section class="section">
                     <div class="section_block-container -container">
@@ -43,7 +46,7 @@
                     </div>
             </section>
             <section class="section-2">
-                <div class="section-2_block-container -container3">
+                <div class="section-2_block-container -container">
                     <div class="block-section-2-body">
                         <div class="paragraph-block">
                             <p class="paragraph">
@@ -66,7 +69,7 @@
                             <h4 class="h4-tittle-section-3">Головні герої</h4>
                         </div>
                         <div class="block-actors-group-section-3">
-                            <div class="block-actor-section-3 -block-actor-double">
+                            <div class="block-actor-section-3">
                                 <img src="{{ url_for('static', filename='photo1.png') }}" alt="">
                                 <h5 class="h5-tittle-section-3">Блейк Лайвлі</h5>
                                 <h6 class="h6-tittle">Аделайн</h6>
@@ -100,7 +103,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section -section">
+            <section class="section -section -section-4">
                 <div class="section_block-container -container">
                     <div class="block-section-body">
                         <div class="section-block-tittle -block-tittle">
@@ -127,44 +130,44 @@
             </div>
         </section>
         <section class="section-3">
-            <div class="section-3_block-container -container-2">
+            <div class="section-3_block-container -container">
                 <div class="block-section-3-body">
                     <div class="block-h4-tittle-section-3">
                         <h4 class="h4-tittle-section-3">Головні герої</h4>
                     </div>
                     <div class="block-actors-group-section-3">
                         <div class="block-actor-section-3 -block-actor-double">
-                            <img src="{{ url_for('static', filename='photo7.png') }}" alt="">
+                            <img class="img-actor" src="{{ url_for('static', filename='photo7.png') }}" alt="">
                             <div class="block-h5-tittle-section-3">
                                 <h5 class="h5-tittle-section-3">Грант Розенмейєр</h5>
                             </div>
                         </div>
-                        <div class="block-actor-section-3">
-                            <img src="{{ url_for('static', filename='photo8.png') }}" alt="">
+                        <div class="block-actor-section-3 -block-actor-double">
+                            <img class="img-actor" src="{{ url_for('static', filename='photo8.png') }}" alt="">
                             <div class="block-h5-tittle-section-3">
                                 <h5 class="h5-tittle-section-3">Хейден Сзето</h5>
                             </div>
                         </div>
-                        <div class="block-actor-section-3">
-                            <img src="{{ url_for('static', filename='photo9.png') }}" alt="">
+                        <div class="block-actor-section-3 -block-actor-double">
+                            <img class="img-actor" src="{{ url_for('static', filename='photo9.png') }}" alt="">
                             <div class="block-h5-tittle-section-3">
                                 <h5 class="h5-tittle-section-3">Хейден Сзето</h5>
                             </div>
                         </div>
-                        <div class="block-actor-section-3">
-                            <img src="{{ url_for('static', filename='photo10.png') }}" alt="">
+                        <div class="block-actor-section-3 -block-actor-double">
+                            <img class="img-actor" src="{{ url_for('static', filename='photo10.png') }}" alt="">
                             <div class="block-h5-tittle-section-3">
                                 <h5 class="h5-tittle-section-3">Дейзі Тьютор</h5>
                             </div>
                         </div>
-                        <div class="block-actor-section-3">
-                            <img src="{{ url_for('static', filename='photo11.png') }}" alt="">
+                        <div class="block-actor-section-3 -block-actor-double">
+                            <img class="img-actor" src="{{ url_for('static', filename='photo11.png') }}" alt="">
                             <div class="block-h5-tittle-section-3">
                                 <h5 class="h5-tittle-section-3">Джанин Гарофало</h5>
                             </div>
                         </div>
-                        <div class="block-actor-section-3">
-                            <img src="{{ url_for('static', filename='photo12.png') }}" alt="">
+                        <div class="block-actor-section-3 -block-actor-double">
+                            <img class="img-actor" src="{{ url_for('static', filename='photo12.png') }}" alt="">
                             <div class="block-h5-tittle-section-3">
                                 <h5 class="h5-tittle-section-3">Уокер Нетта</h5>
                             </div>
@@ -173,33 +176,263 @@
                 </div>
             </div>
         </section>
+        <section class="section -section -section-4 -section-5">
+            <div class="section_block-container -container">
+                <div class="block-section-body">
+                    <div class="section-block-tittle -block-tittle">
+                       <h2 class="section-h2-tittle">Художній фільм: <span class="section-span-tittle">,,Пеле”</span></h2>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="section-2">
+        <div class="section-2_block-container -container">
+            <div class="block-section-2-body">
+                <div class="paragraph-block">
+                    <p class="paragraph">
+                        Біографічна драма розповість про закулісся спорту, зокрема про життя найбільшого гравця в історії футболу - Пеле. Глядачі стануть свідками нелегкого життя бразильської спортивної легенди. Скільки перешкод йому вдалося подолати на своєму шляху, щоб домогтися світової популярності? Саме зараз він демонструє неймовірні професійні досягнення і, до всього іншого, не забуває про благородні вчинки, але раніше все було інакше.
+                    </p>
+                    <p class="paragraph">
+                        З ранніх років Пеле жадав отримати визнання, невпинно йшов до своєї мрії, долаючи перешкоди, тим самим гартуючи характер. Картина охоплює дитинство футболіста, аж до перемоги на чемпіонаті світу в Швеції, коли Пеле було сімнадцять років. Доля не завжди була прихильна до спортсмена, але за кожною успішною людиною стоїть багато праці, залізної волі і твердої впевненості у власних силах.
+                    </p>
+                    <p class="paragraph">
+                        Сюжетна лінія фільму охоплює дитинство майбутньої легенди футболу, аж до перемоги на чемпіонаті світу в Швеції, коли Пеле було сімнадцять років. Доля Едсона Арантеса ду Насименту не завжди була для нього сприятливою. Його батько був перспективним гравцем, але рано отримав травму і не зміг досягти значних досягнень.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-3">
+        <div class="section-3_block-container -container">
+            <div class="block-section-3-body">
+                <div class="block-h4-tittle-section-3">
+                    <h4 class="h4-tittle-section-3">Головні герої</h4>
+                </div>
+                <div class="block-actors-group-section-3">
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image28.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3 -h5">
+                            <h5 class="h5-tittle-section-3">Кевін де Паула</h5>
+                            <h6 class="h6-tittle">Пеле</h6>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image29.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3 -h5">Сеу Жоржи</h5>
+                            <h6 class="h6-tittle">Дондіньо</h6>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image30.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3 -h5">
+                            <h5 class="h5-tittle-section-3">Марина Нунес</h5>
+                            <h6 class="h6-tittle">Селесте</h6>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image31.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3 -h5">
+                            <h5 class="h5-tittle-section-3">Вінсент Д'Онофріо</h5>
+                            <h6 class="h6-tittle">Вісенте Феола</h6>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image32.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3 -h5">
+                            <h5 class="h5-tittle-section-3">Мілтон Гонсалвес</h5>
+                            <h6 class="h6-tittle">Вальдемар де Бріто</h6>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image33.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3 -h5">
+                            <h5 class="h5-tittle-section-3">Дієго Бонета</h5>
+                            <h6 class="h6-tittle">Жозе Альтафіні</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="section_block-container -container-width -section-6">
+            <div class="block-section-body">
+                <div class="section-block-tittle -block-tittle">
+                   <h2 class="section-h2-tittle">Художній фільм: <span class="section-span-tittle">,,Мисливець на Уолл-стріт”</span></h2>
+                </div>
+            </div>
+        </div>
+    <section class="section-2">
+        <div class="section-2_block-container -container">
+            <div class="block-section-2-body">
+                <div class="paragraph-block">
+                    <p class="paragraph">
+                        Блискучий співробітник рекрутингової компанії Дейн Дженсен постійно знаходиться на роботі і не приділяє часу сім'ї. Його робота вже перекочувала з офісного будинку. Робота Дейна не приносить плодів. Бос Дженсена збирається піти у відставку, а його місце буде вакантним. Дейну прийшла ідея зайняти його місце. Але гонка за крісло боса буде непростою. 
+                    </p>
+                    <p class="paragraph">
+                        Він постійно думає про нову планку, про нові досягнення, які чекають його на роботі кожен день. Дейн напористий і гарячий, його амбіції не згасли з роками. Своє божевілля на роботі він пояснює необхідністю утримувати сім'ю. Це всього лише ширма, за якою ховається людина, яка хоче досягти неможливої досконалості. Його професія не передбачає глибоких морально-моральних якостей.
+                    </p>
+                    <p class="paragraph">
+                        Співробітнику рекрутингового агентства Blackridge, хедхантеру з Уолл-стріт Дейну Дженсену обіцяють підвищення, але для цього йому доведеться обійти за показниками свою колегу Лінн Вілсон. Повністю зайнятий роботою, Дейн все менше уваги приділяє своїй сім'ї. Дружина незадоволена. Старший син, який поскаржився на погане самопочуття, виявляється хворим на рак, і головному герою мимоволі доводиться вибирати.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-3">
+        <div class="section-3_block-container -container">
+            <div class="block-section-3-body">
+                <div class="block-h4-tittle-section-3">
+                    <h4 class="h4-tittle-section-3">Головні герої</h4>
+                </div>
+                <div class="block-actors-group-section-3">
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image35.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Батлер Джерард</h5>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image36.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Мол Гретчен</h5>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image37.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Брі Элісон</h5>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image38.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Моліна Альфред</h5>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image39.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Баттерз Джулия</h5>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image40.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Манро Кэтлін</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="section_block-container -container-width -section-7">
+            <div class="block-section-body">
+                <div class="section-block-tittle -block-tittle">
+                   <h2 class="section-h2-tittle">Художній фільм: <span class="section-span-tittle">,,Секрет(1 частина)”</span></h2>
+                </div>
+            </div>
+        </div>
+    <section class="section-2">
+        <div class="section-2_block-container -container">
+            <div class="block-section-2-body">
+                <div class="paragraph-block">
+                    <p class="paragraph">
+                        Коли сильний шторм руйнує будинок молодої вдови із трьома дітьми, на порозі з'являється таємничий незнайомець. За кілька днів загадковий гість об'єднує сім'ю і допомагає їм знайти новий сенс у житті. Він відкриває їм секрет, який може змінити все. 
+                    </p>
+                    <p class="paragraph">
+                        У центрі сюжету опиниться молода вдова Міранда Веллс, яка змушена сама виховувати трьох дітей. Тоді вона наймає майстра на ім'я Брей, щоб той допоміг відновити лад у її будинку після шторму. Чоловік дуже зближується із сімейством, але головна героїня усвідомлює, що він з'явився у будинку не просто так.
+                    </p>
+                    <p class="paragraph">
+                        Дія фільму відбувається в Новому Орлеані. Міранда Уеллс, молода вдова, яка намагається виховати трьох дітей. Брей, таємничий доброзичливець, допомагає їй відновити будинок, пошкоджений ураганом. Брей незабаром стає другом сім'ї. Міранда здогадується, що за його зовнішністю стоїть якась дивовижна таємниця.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-3">
+        <div class="section-3_block-container -container">
+            <div class="block-section-3-body">
+                <div class="block-h4-tittle-section-3">
+                    <h4 class="h4-tittle-section-3">Головні герої</h4>
+                </div>
+                <div class="block-actors-group-section-3">
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image42.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Кеті Холмс</h5>
+                            <h6 class="h6-tittle">Міранда Уєлс</h6>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image43.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Лукас Джош</h5>
+                            <h6 class="h6-tittle">Брей</h6>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image44.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Вестон Селія</h5>
+                            <h6 class="h6-tittle">Боббі</h6>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image45.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">О'Коннелл, Джеррі</h5>
+                            <h6 class="h6-tittle">Такер</h6>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image46.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Сара Хоффмайстер</h5>
+                            <h6 class="h6-tittle">Міссі Уеллс</h6>
+                        </div>
+                    </div>
+                    <div class="block-actor-section-3 -block-actor-double">
+                        <img class="img-actor" src="{{ url_for('static', filename='image47.png') }}" alt="">
+                        <div class="block-h5-tittle-section-3">
+                            <h5 class="h5-tittle-section-3">Ейдан Пірс</h5>
+                            <h6 class="h6-tittle">Грег Уеллс</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
         </main>
         <footer class="footer">
             <div class="footer_block-container -container">
-                <div class="block-footer-body">
-                    <div class="line_container">
-                        <hr class="line">
+                <div class="footer_block-body">
+
+                    <div class="footer_block-about">
+                        <div class="description_block-hr -white"></div>
+                        <div class="footer_block-social">
+                            <div class="footer_block-item">
+                                <i class="fa-brands fa-instagram"></i>
+                                <a href=""><span>psy.olesya.kr</span></a>
+                            </div>
+                            <div class="footer_block-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <a href=""><span>+380(67) 638 16 17</span></a>
+                            </div>
+                            <div class="footer_block-item">
+                                <i class="fa-brands fa-facebook"></i>
+                                <a href=""><span>Секрети Сімейного Благополуччя</span></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="container-buttons-first-footer">
-                        <img class="img-footer" src="{{ url_for('static', filename='uil_instagram-alt.png') }}"alt="">
-                        <a class="button-footer" href="">psy.olesya.kr</a>
+
+                    <div class="footer_block-name">
+                        <h1 class="footer_block-tittle"><a href="">O<span>T</span></a></h1>
+                        <h2 class="footer_block-subtittle"><a href="">Olesya<span>Tsymbal</span></a></h2>
                     </div>
-                    <div class="container-buttons-footer">
-                        <img class="img-footer" src="{{ url_for('static', filename='fluent_call-12-filled.png') }}" alt="">
-                        <a class="button-footer" href="">+380(67) 638 16 17</a>
-                    </div>
-                    <div class="container-buttons-footer">
-                        <img class="img-footer" src="{{ url_for('static', filename='mdi_facebook.png') }}" alt="">
-                        <a class="button-footer" href="">Секрети Сімейного Благополуччя</a>
-                    </div>
-                    <div class="container-buttons-footer">
-                        <img class="img-footer" src="{{ url_for('static', filename='mdi_facebook.png') }}" alt="">
-                        <a class="button-footer" href="">Олеся Цимбал</a>
-                    </div>
-                </div>
-                <div class="block-tittles-footer">
-                    <h1 class="h1-tittle-footer">O<span class="span-fotter">C</span></h1>
-                    <h3 class="h3-tittle-footer">Olesya<span class="next-span-footer">Cymbal</span></h3>
+
                 </div>
             </div>
         </footer>
