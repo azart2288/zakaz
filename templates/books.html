@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='books.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="header_block-container -container">
+                <div class="header_block-body">
+                    <a href="/"><h2 class="header_block-tittle">Olesya<span>Tsymbal</span></h2></a>
+                    <nav class="header_block-menu">
+                        <ul class="header_block-list">
+                            <li class="header_block-item">
+                                <a href="/" class="header_block-link -green">Про себе</a>
+                            </li>
+                            <li class="header_block-item">
+                                <a href="{{ url_for('posts') }}" class="header_block-link">Статті</a>
+                            </li>
+                            <li class="header_block-item"> 
+                                <a href="{{ url_for('index') }}" class="header_block-link">Бібліотека</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header_block-menutel">
+                        <a href=""><img src="{{ url_for('static', filename='png15.png') }}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="header_menu2 -container">
+                <div class="header_menu2-body">
+                    <ul class="header_menu2-list">
+                        <li class="header_menu2-item">
+                            <a href="/" class="header_menu2-link">Про себе</a>
+                        </li>
+                        <li class="header_menu2-item">
+                            <a href="{{ url_for('posts') }}" class="header_menu2-link">Статті</a>
+                        </li>
+                        <li class="header_menu2-item"> 
+                            <a href="{{ url_for('index') }}" class="header_menu2-link">Бібліотека</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="books_block">
+                <div class="books_block-container -container">
+                    <div class="books_block-body">
+                        <div class="books_block-group"> 
+
+                            <div class="books_block-item">
+                                <div class="books_block-img">
+                                    <img src="{{ url_for('static', filename='png16.png') }}" alt="">
+                                </div>
+                                <div class="books_block-texts">
+                                    <div class="books_block-text">
+                                        <p>«До себе ніжно. Книга про те, як цінувати й берегти себе» «До себе ніжно» — це книга для тих, хто тривалий час ігнорував свої потреби й бажання, стримував почуття та емоції, мовчав про найважливіше для себе й не сприймав себе справжньої. Авторка пропонує стати собі другом і ставитися до себе з найбільшою ніжністю, на яку ви здатні.</p>
+                                        <p id="books_text-none">«Зона комфорту - це термін, спочатку створений для організацій і підприємств і тиражований всілякими гуру як зручний інструмент мотивації людей через почуття провини і сорому. Це не має нічого спільного з особистим розвитком, в тому числі і тому, що багато людей спочатку не знаходяться в зоні комфорту. Навпаки, вони повинні спочатку в неї потрапити, щоб у них був простір і сили для прогресу.</p>
+                                    </div>
+                                    <div class="books_block-button">
+                                        <span class="books_block-readmore" >Читати Більше...</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="books_block-item">
+                                <div class="books_block-img">
+                                    <img src="{{ url_for('static', filename='png17.png') }}" alt="">
+                                </div>
+                                <div class="books_block-texts">
+                                    <div class="books_block-text">
+                                        <p>Ерік Берн детально описує понад 120 ігор, у які ми граємо самі та у які нас залучають навколишні. А також дає поради для тих, хто хоче навчитись протистояти прийомам ігор, у які вас намагаються втягнути. Він допомагає проаналізувати нюанси поведінки, позбавитись стереотипів у спілкуванні й дає розуміння сутності людських вчинків.</p>
+                                        <p id="books_text-none">Саме з публікації цього міжнародного бестселера в нашій країні почався психологічний бум, коли мільйони людей раптом усвідомили, що психологія може бути неймовірно цікавою і з її допомогою можна багато чого зрозуміти в собі і оточуючих.</p>
+                                    </div>
+                                    <div class="books_block-button">
+                                        <span class="books_block-readmore" >Читати Більше...</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_block-container -container">
+                <div class="footer_block-body">
+
+                    <div class="footer_block-about">
+                        <div class="description_block-hr -white"></div>
+                        <div class="footer_block-social">
+                            <div class="footer_block-item">
+                                <i class="fa-brands fa-instagram"></i>
+                                <a href=""><span>psy.olesya.kr</span></a>
+                            </div>
+                            <div class="footer_block-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:+380(67) 638 16 17"><span>+380(67) 638 16 17</span></a>
+                            </div>
+                            <div class="footer_block-item" id="click">
+                                <i class="fa-brands fa-facebook"></i>
+                                <a href=""><span>Секрети Сімейного Благополуччя</span></a>
+                                <img  class="footer_block-img" src="{{ url_for('static', filename='png19.png') }}" alt="">
+                            </div>
+                            <div class="footer_block-item unvisible" id="unvisible">
+                                <i class="fa-brands fa-facebook"></i>
+                                <a href=""><span>Олеся Цимбал</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer_block-name">
+                        <h1 class="footer_block-tittle"><a href="/">O<span>T</span></a></h1>
+                        <h2 class="footer_block-subtittle"><a href="/">Olesya<span>Tsymbal</span></a></h2>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='header-footer.js') }}"></script>
+    <script src="{{ url_for('static', filename='books.js') }}"></script>
+
+</body>
+</html>

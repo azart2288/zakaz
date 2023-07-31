@@ -37,6 +37,21 @@
                     </div>
                 </div>
             </div>
+            <div class="header_menu2 -container">
+                <div class="header_menu2-body">
+                    <ul class="header_menu2-list">
+                        <li class="header_menu2-item">
+                            <a href="/" class="header_menu2-link">Про себе</a>
+                        </li>
+                        <li class="header_menu2-item">
+                            <a href="{{ url_for('posts') }}" class="header_menu2-link">Статті</a>
+                        </li>
+                        <li class="header_menu2-item"> 
+                            <a href="{{ url_for('index') }}" class="header_menu2-link">Бібліотека</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
 
         <main class="main">
@@ -108,7 +123,6 @@
                         <div class="invite_block-inviteincenter">
                             <div class="invite_block-invitein">
                                 <div class="invite_block-border"></div>
-                                <button>Записатися</button>
                             </div>
                         </div>
                     </div>
@@ -180,11 +194,16 @@
                             </div>
                             <div class="footer_block-item">
                                 <i class="fa-solid fa-phone"></i>
-                                <a href=""><span>+380(67) 638 16 17</span></a>
+                                <a href="tel:+380(67) 638 16 17"><span>+380(67) 638 16 17</span></a>
                             </div>
-                            <div class="footer_block-item">
+                            <div class="footer_block-item" id="click">
                                 <i class="fa-brands fa-facebook"></i>
                                 <a href=""><span>Секрети Сімейного Благополуччя</span></a>
+                                <img  class="footer_block-img" src="{{ url_for('static', filename='png19.png') }}" alt="">
+                            </div>
+                            <div class="footer_block-item unvisible" id="unvisible">
+                                <i class="fa-brands fa-facebook"></i>
+                                <a href=""><span>Олеся Цимбал</span></a>
                             </div>
                         </div>
                     </div>
@@ -199,6 +218,7 @@
         </footer>
 
     </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
 
 
 </body>

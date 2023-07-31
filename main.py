@@ -22,6 +22,10 @@ app.secret_key = 'zsasxcsdcsdfsdfsvsdgsdgdsg'
 def home():
     return render_template('main.html')
 
+@app.route("/books")
+def books():
+    return render_template('books.html')
+
 
 @app.route('/library')
 def index():
