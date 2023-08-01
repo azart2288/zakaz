@@ -15,23 +15,38 @@
         <header class="header">
             <div class="header_block-container -container">
                 <div class="header_block-body">
-                    <a href="/"><h2 class="header_block-tittle">Olesya<span class="span-tittle-header">Tsymbal</span></h2></a>
+                    <a href="/"><h2 class="header_block-tittle">Olesya<span>Tsymbal</span></h2></a>
                     <nav class="header_block-menu">
                         <ul class="header_block-list">
                             <li class="header_block-item">
-                                <a href="/" class="header_block-link">Про себе</a>
+                                <a href="/" class="header_block-link -green">Про себе</a>
                             </li>
                             <li class="header_block-item">
                                 <a href="{{ url_for('posts') }}" class="header_block-link">Статті</a>
                             </li>
                             <li class="header_block-item"> 
-                                <a href="{{ url_for('index') }}" class="header_block-link -green">Бібліотека</a>
+                                <a href="{{ url_for('index') }}" class="header_block-link">Бібліотека</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="header_block-menutel">
                         <a href=""><img src="{{ url_for('static', filename='png15.png') }}" alt=""></a>
                     </div>
+                </div>
+            </div>
+            <div class="header_menu2 -container">
+                <div class="header_menu2-body">
+                    <ul class="header_menu2-list">
+                        <li class="header_menu2-item">
+                            <a href="/" class="header_menu2-link">Про себе</a>
+                        </li>
+                        <li class="header_menu2-item">
+                            <a href="{{ url_for('posts') }}" class="header_menu2-link">Статті</a>
+                        </li>
+                        <li class="header_menu2-item"> 
+                            <a href="{{ url_for('index') }}" class="header_menu2-link">Бібліотека</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -62,11 +77,16 @@
                             </div>
                             <div class="footer_block-item">
                                 <i class="fa-solid fa-phone"></i>
-                                <a href=""><span>+380(67) 638 16 17</span></a>
+                                <a href="tel:+380(67) 638 16 17"><span>+380(67) 638 16 17</span></a>
                             </div>
-                            <div class="footer_block-item">
+                            <div class="footer_block-item" id="click">
                                 <i class="fa-brands fa-facebook"></i>
                                 <a href=""><span>Секрети Сімейного Благополуччя</span></a>
+                                <img  class="footer_block-img" src="{{ url_for('static', filename='png19.png') }}" alt="">
+                            </div>
+                            <div class="footer_block-item unvisible" id="unvisible">
+                                <i class="fa-brands fa-facebook"></i>
+                                <a href=""><span>Олеся Цимбал</span></a>
                             </div>
                         </div>
                     </div>
@@ -80,5 +100,6 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
