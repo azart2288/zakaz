@@ -127,7 +127,8 @@ def change_post():
     cursor = connection.cursor()
     post_id = request.form["post_id"]
     new_text = request.form["admin_text"]
-    cursor.execute("UPDATE mytable SET texts=? WHERE id=?", (new_text, post_id))
+    new_title = request.form["change_title"]
+    cursor.execute("UPDATE mytable SET texts=?, name=? WHERE id=?", (new_text,new_title, post_id))
     connection.commit()
     connection.close()
     return redirect("/posts")
