@@ -71,6 +71,9 @@ ol{
     font-weight: 700;
     color:#1FA786;
 }
+.span-tittle-header{
+    color: #000;
+}
 .-green {
     color:#23715E;
     font-weight: 600;
@@ -110,7 +113,7 @@ ol{
 .block-section_body {
 }
 .h3-block-tittle {
-    padding: 26px 0 0 22px ;
+    padding-top: 26px;
 }
 .h3-tittle {
     color: #23715E;
@@ -172,6 +175,12 @@ ol{
 
 
 }
+.single-line {
+  resize: none; /* Запрещаем изменение размера textarea */
+  overflow: hidden; /* Скрываем лишний текст, если есть */
+  white-space: nowrap; /* Запрещаем перенос строк */
+}
+
 .input-text-section::placeholder{
     color: #23715E;
     font-size: 18px;
@@ -335,23 +344,19 @@ ol{
     }
     .-container {
         max-width: 600px;
-        margin: 0 auto;
         padding: 0 25px;
     }
     .block-line{
         display: none;
     }
-    .h3-tittle{
-        margin: 0 0 17px 0;
+    .h3-block-tittle{
+        padding: 17px 0 17px 26px;
     }
     .group-all-blocks:not(:last-child){
         padding: 0 0 0 60px;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-    }
-    .h3-tittle{
-        margin-top: 20px;
     }
 }
 @media ( max-width:485px ) {

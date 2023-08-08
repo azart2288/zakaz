@@ -20,5 +20,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
       }
     });
   });
-
+  const containerBooks = document.querySelector('#books_block-container')
+    if(matchMedia) {
+      let screen = window.matchMedia("(max-width:600px)");
+      screen.addListener(changes);
+      changes(screen);
+    }
+    function changes(screen) {
+      if (screen.matches) {
+        containerBooks.className = containerBooks.className.replace('books_block-container -container', 'books_block-container')
+      } else {
+        containerBooks.className = containerBooks.className.replace('books_block-container', 'books_block-container -container')
+      }
+    }
 })
