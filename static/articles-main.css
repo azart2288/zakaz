@@ -261,7 +261,6 @@ ol{
     display: flex;
 }
 .footer_block-img {
-    transform: rotate(180deg);
     cursor: pointer;
 }
 .footer_block-img.down {
