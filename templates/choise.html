@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Library</title>
+    <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
@@ -19,13 +19,13 @@
                     <nav class="header_block-menu">
                         <ul class="header_block-list">
                             <li class="header_block-item">
-                                <a href="/" class="header_block-link -green">Про себе</a>
+                                <a href="/" class="header_block-link">Про себе</a>
                             </li>
                             <li class="header_block-item">
                                 <a href="{{ url_for('posts') }}" class="header_block-link">Статті</a>
                             </li>
                             <li class="header_block-item"> 
-                                <a href="{{ url_for('index') }}" class="header_block-link">Бібліотека</a>
+                                <a href="{{ url_for('index') }}" class="header_block-link -green">Бібліотека</a>
                             </li>
                         </ul>
                     </nav>
